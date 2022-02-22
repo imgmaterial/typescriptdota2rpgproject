@@ -1,0 +1,766 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// Creed of Omniscience
+	//=================================================================================================================
+	"item_creed_of_omniscience"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"creed_of_omniscience"
+		"ScriptFile"					"items/item_creed_of_omniscience"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_xp"				"15"
+			}
+            "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "1"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Lost Iron Helm
+	//=================================================================================================================
+	"item_forest_helm"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"helm_of_iron_will"
+		"ScriptFile"					"items/item_forest_helm"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_xp"				"15"
+			}
+            "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "1"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"2"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"5"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"3"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Rusty Chainmail
+	//=================================================================================================================
+	"item_forest_armor"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"chainmail"
+		"ScriptFile"					"items/item_forest_armor"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_xp"				"15"
+			}
+            "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"7"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"3"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Scratched Silver Ring
+	//=================================================================================================================
+	"item_forest_ring"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"ring_of_protection"
+		"ScriptFile"					"items/item_forest_ring"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_xp"				"15"
+			}
+            "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "3"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp_regen"		"5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"200"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Blunt Iron Sword
+	//=================================================================================================================
+	"item_forest_sword"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"broadsword"
+		"ScriptFile"					"items/item_forest_sword"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_xp"				"15"
+			}
+            "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"10"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"40"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Hard Leather Boots
+	//=================================================================================================================
+	"item_forest_boots"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"boots"
+		"ScriptFile"					"items/item_forest_boots"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_xp"				"15"
+			}
+            "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "5"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"	"50"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Ripped Apprentice Cloak
+	//=================================================================================================================
+	"item_forest_cloak"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"cloak"
+		"ScriptFile"					"items/item_forest_cloak"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+            "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intelligence"	"11"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"3"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"200"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Apprentices Staff
+	//=================================================================================================================
+	"item_forest_staff"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"quarterstaff"
+		"ScriptFile"					"items/item_forest_staff"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+
+            "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "4"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intelligence"	"15"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"10"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_spell_amp"		"15"
+			}
+		}
+	}
+
+
+
+	//=================================================================================================================
+	// Scholars Circlet
+	//=================================================================================================================
+	"item_forest_circlet"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"circlet"
+		"ScriptFile"					"items/item_forest_circlet"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+            "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "1"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intelligence"	"6"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen"		"5.0"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Dull Magic Ring
+	//=================================================================================================================
+	"item_forest_ring_int"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"arcane_ring"
+		"ScriptFile"					"items/item_forest_ring_int"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+            "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp_regen"		"5"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen"		"5.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intelligence"	"6"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"200"
+			}
+		}
+	}
+
+
+
+	//=================================================================================================================
+	// Bow of the Forest
+	//=================================================================================================================
+	"item_forest_bow"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"grove_bow"
+		"ScriptFile"					"items/item_forest_bow"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_xp"				"15"
+			}
+            "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"10"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"30"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"			"20"
+			}
+		}
+	}
+
+}

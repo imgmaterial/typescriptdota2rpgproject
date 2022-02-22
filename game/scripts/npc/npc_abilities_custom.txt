@@ -1,5 +1,355 @@
-#base "heroes/meepo.kv"
-
+// Dota Heroes File
 "DOTAAbilities"
 {
+	"Version"		"1"
+
+	//=================================================================================================================
+	// Templar Assassin: Refraction Holdout
+	//=================================================================================================================
+	"templar_assassin_refraction_holdout"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"17.0 17.0 17.0 17.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_absorb"				"200 300 400 500"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"20 40 60 80"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"17.0 17.0 17.0 17.0"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Spider Boss Web
+	//=================================================================================================================
+	"spider_boss_web_ability"
+	{
+
+		"BaseClass" 					"ability_lua"
+		"ScriptFile"					"abilities/spider_boss_web_ability"
+
+
+		"AbilityTextureName"     		"broodmother_spin_web"
+
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		//"AbilityUnitDamageType"		"DAMAGE_TYPE_PHYSICAL"	
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0 0 0 0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		"AOERadius" 					"1000"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"1000"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Poisonnous Bite (forest spiders)
+	//=================================================================================================================
+	"ability_poisonous_bite"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/ability_poisonous_bite"
+		"AbilityTextureName"			"venomancer_poison_sting"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+
+
+
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movespeed_loss"		"10"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor_loss"			"3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"10"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Spider Queen Web Cocoon
+	//=================================================================================================================
+	"ability_web_cocoon"
+	{
+		// Ability Technical Aspect
+		// base script folder	: scripts/vscripts
+		// base texture folder	: resource/flash3/images/spellicons
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/ability_web_cocoon"
+		"AbilityTextureName"			"naga_siren_ensnare"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+			"particle"	"particles/units/heroes/hero_siren/siren_net_projectile.vpcf"
+			"particle"	"particles/units/heroes/hero_siren/siren_net.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"650 650 650 650"
+		"AbilityCastPoint"				"0.6"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 20 20 20"
+		"AbilityManaCost"				"0 0 0 0"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"20.0 20.0 20.0 20.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"net_speed"					"1500 1500 1500 1500"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"fake_ensnare_distance"		"900 900 900 900"	
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Spider Queen Enrage
+	//=================================================================================================================
+	"ability_spider_enrage"
+	{
+		// Ability Technical Aspect
+		// base script folder	: scripts/vscripts
+		// base texture folder	: resource/flash3/images/spellicons
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/ability_spider_enrage"
+		"AbilityTextureName"			"broodmother_insatiable_hunger"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+			"particle"	"particles/units/heroes/hero_siren/siren_net_projectile.vpcf"
+			"particle"	"particles/units/heroes/hero_siren/siren_net.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		//"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		//"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		//"AbilityCastRange"			"650 650 650 650"
+		//"AbilityCastPoint"			"0.6"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30 30 30 30"
+		"AbilityManaCost"				"0 0 0 0"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"5 5 5 5"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"lifesteal"					"1 1 1 1"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"status_res"				"100 100 100 100"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"bonus_damage"				"300 300 300 300"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"bonus_ats"					"300 300 300 300"
+			}
+		}
+	}
+
+
+
+	//=================================================================================================================
+	// Spider Queen Web Cocoon
+	//=================================================================================================================
+	"ability_spider_decompose"
+	{
+		// Ability Technical Aspect
+		// base script folder	: scripts/vscripts
+		// base texture folder	: resource/flash3/images/spellicons
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/ability_spider_decompose"
+		"AbilityTextureName"			"broodmother_spawn_spiderlings"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+			"particle"	"particles/units/heroes/hero_broodmother/broodmother_silken_bola_projectile_d.vpcf"
+			"particle"	"particles/econ/items/pugna/pugna_ti9_immortal/pugna_ti9_immortal_netherblast.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"650 650 650 650"
+		"AbilityCastPoint"				"0.6"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 20 20 20"
+		"AbilityManaCost"				"0 0 0 0"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"3.0 3.0 3.0 3.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"net_speed"					"1500 1500 1500 1500"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"fake_ensnare_distance"		"900 900 900 900"	
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"5000 5000 5000 5000"	
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"300 300 300 300"	
+			}
+		}
+	}
 }
