@@ -831,7 +831,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_distance_damage"	"0.5"
+				"bonus_distance_damage"	"50"
 			}
 		}
 	}
