@@ -7,6 +7,7 @@ export class modifier_item_light_crossbow extends BaseModifier
     bonus_damage ?:number;
     bonus_attack_speed ?:number;
     bonus_distance_damage ?:number;
+    bonus_attack_range ?:number;
 
     IsHidden(): boolean {
         return true
@@ -24,11 +25,16 @@ export class modifier_item_light_crossbow extends BaseModifier
             this.bonus_damage = ability.GetSpecialValueFor("bonus_damage");
             this.bonus_attack_speed = ability.GetSpecialValueFor("bonus_attack_speed")
             this.bonus_distance_damage = ability.GetSpecialValueFor("bonus_distance_damage")
+            this.bonus_attack_range = ability.GetSpecialValueFor("bonus_attack_range")
         }
     }
 
     DeclareFunctions() {
-        return [ModifierFunction.STATS_AGILITY_BONUS, ModifierFunction.PREATTACK_BONUS_DAMAGE, ModifierFunction.ATTACKSPEED_BONUS_CONSTANT, ModifierFunction.PROCATTACK_BONUS_DAMAGE_PURE];
+        return [ModifierFunction.STATS_AGILITY_BONUS, 
+            ModifierFunction.PREATTACK_BONUS_DAMAGE, 
+            ModifierFunction.ATTACKSPEED_BONUS_CONSTANT, 
+            ModifierFunction.PROCATTACK_FEEDBACK,
+            ModifierFunction.ATTACK_RANGE_BONUS];
     }
 
     GetModifierBonusStats_Agility()
@@ -46,7 +52,12 @@ export class modifier_item_light_crossbow extends BaseModifier
         return this.bonus_attack_speed ?? 0;
     }
 
-    GetModifierProcAttack_BonusDamage_Pure()
+    GetModifierAttackRangeBonus()
+    {
+        return this.bonus_attack_range ?? 0;
+    }
+
+    GetModifierProcAttack_Feedback()
     {
         const attack_target = this.GetParent().GetAttackTarget()
         const owner_unit = this.GetParent()
