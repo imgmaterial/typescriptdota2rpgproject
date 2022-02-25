@@ -1,18 +1,30 @@
 --[[ Generated with https://github.com/TypeScriptToLua/TypeScriptToLua ]]
 require("lualib_bundle");
-__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["5"] = 1,["6"] = 1,["7"] = 1,["8"] = 2,["9"] = 2,["10"] = 4,["11"] = 5,["12"] = 4,["13"] = 5,["14"] = 7,["15"] = 8,["16"] = 7,["17"] = 12,["18"] = 13,["19"] = 14,["20"] = 12,["21"] = 17,["22"] = 18,["23"] = 20,["24"] = 21,["25"] = 22,["26"] = 24,["27"] = 25,["30"] = 17,["31"] = 31,["32"] = 32,["33"] = 33,["34"] = 34,["35"] = 36,["38"] = 40,["39"] = 40,["40"] = 42,["41"] = 43,["42"] = 45,["44"] = 40,["47"] = 49,["48"] = 31,["49"] = 5,["51"] = 4,["53"] = 5});
+__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["5"] = 1,["6"] = 1,["7"] = 1,["8"] = 2,["9"] = 2,["10"] = 3,["11"] = 3,["12"] = 5,["13"] = 6,["14"] = 5,["15"] = 6,["16"] = 8,["17"] = 9,["18"] = 8,["19"] = 12,["20"] = 13,["21"] = 13,["22"] = 13,["23"] = 13,["24"] = 13,["25"] = 13,["26"] = 13,["27"] = 13,["28"] = 12,["29"] = 17,["30"] = 18,["31"] = 19,["32"] = 17,["33"] = 22,["34"] = 23,["35"] = 25,["36"] = 26,["37"] = 27,["38"] = 29,["39"] = 30,["42"] = 22,["43"] = 36,["44"] = 37,["45"] = 38,["46"] = 39,["47"] = 41,["50"] = 45,["51"] = 45,["52"] = 47,["53"] = 48,["54"] = 50,["56"] = 45,["59"] = 54,["60"] = 36,["61"] = 6,["63"] = 5,["65"] = 6});
 local ____exports = {}
 local ____dota_ts_adapter = require("lib.dota_ts_adapter")
 local registerAbility = ____dota_ts_adapter.registerAbility
 local BaseItem = ____dota_ts_adapter.BaseItem
 local ____modifier_item_swift_blade = require("modifiers.modifier_item_swift_blade")
 local modifier_item_swift_blade = ____modifier_item_swift_blade.modifier_item_swift_blade
+local ____modifier_item_swift_blade_buff = require("modifiers.modifier_item_swift_blade_buff")
+local modifier_item_swift_blade_buff = ____modifier_item_swift_blade_buff.modifier_item_swift_blade_buff
 ____exports.item_swift_blade = __TS__Class()
 local item_swift_blade = ____exports.item_swift_blade
 item_swift_blade.name = "item_swift_blade"
 __TS__ClassExtends(item_swift_blade, BaseItem)
 function item_swift_blade.prototype.GetIntrinsicModifierName(self)
     return modifier_item_swift_blade.name
+end
+function item_swift_blade.prototype.OnSpellStart(self)
+    self:GetCaster():AddNewModifier(
+        self:GetCaster(),
+        self,
+        modifier_item_swift_blade_buff.name,
+        {
+            duration = self:GetSpecialValueFor("buff_duration")
+        }
+    )
 end
 function item_swift_blade.prototype.OnOwnerSpawned(self)
     local required_level = self:GetSpecialValueFor("required_level")

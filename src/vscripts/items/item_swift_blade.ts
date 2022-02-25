@@ -1,11 +1,16 @@
 import { registerAbility, BaseItem } from "../lib/dota_ts_adapter";
 import { modifier_item_swift_blade } from "../modifiers/modifier_item_swift_blade";
+import { modifier_item_swift_blade_buff } from "../modifiers/modifier_item_swift_blade_buff";
 
 @registerAbility()
 export class item_swift_blade extends BaseItem
 {
     GetIntrinsicModifierName(): string {
         return modifier_item_swift_blade.name
+    }
+
+    OnSpellStart(): void {
+        this.GetCaster().AddNewModifier(this.GetCaster(), this, modifier_item_swift_blade_buff.name, {duration : this.GetSpecialValueFor("buff_duration")})
     }
 
 

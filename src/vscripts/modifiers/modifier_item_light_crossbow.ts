@@ -65,7 +65,6 @@ export class modifier_item_light_crossbow extends BaseModifier
         { 
             
             const damage_per_unit_distance:number = this.bonus_distance_damage ?? 0;
-            SendToConsole("target")
             return (owner_unit.GetRangeToUnit(attack_target)*damage_per_unit_distance)/100
         }
         else

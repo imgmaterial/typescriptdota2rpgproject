@@ -60,8 +60,12 @@ export class modifier_item_swift_blade extends BaseModifier
         {
             if (Math.floor(Math.random()*100)<this.proc_chance)
             {
-                this.record = params.record
-                return this.bonus_agility_damage ?? 0;
+                if (this.GetParent().IsHero() )
+                {
+                    this.record = params.record
+                    const agi_proc:number = ((this.GetParent() as CDOTA_BaseNPC_Hero).GetAgility())
+                    return (this.bonus_agility_damage ?? 0) * agi_proc;
+                }
             }
             return 0
         }
