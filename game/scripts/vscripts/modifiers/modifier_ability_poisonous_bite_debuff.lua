@@ -10,7 +10,7 @@ function modifier_ability_poisonous_bite_debuff:IsDebuff()
 end
 
 function modifier_ability_poisonous_bite_debuff:IsPurgable()
-	return false
+	return true
 end
 
 --------------------------------------------------------------------------------
@@ -76,8 +76,10 @@ function modifier_ability_poisonous_bite_debuff:AddStack( duration )
 end
 
 function modifier_ability_poisonous_bite_debuff:RemoveStack()
-	if self:GetParent():IsAlive() == true then
-		self:DecrementStackCount()
+	if IsValidEntity(self) then
+		if self:GetParent():IsAlive() == true then
+			self:DecrementStackCount()
+		end
 	end
 
 	if self:GetStackCount()<=0 then

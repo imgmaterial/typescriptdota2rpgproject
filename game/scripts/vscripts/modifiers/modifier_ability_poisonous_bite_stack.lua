@@ -20,6 +20,8 @@ end
 
 function modifier_ability_poisonous_bite_stack:OnRemoved()
 	if IsServer() then
-		self.modifier:RemoveStack()
+		if IsValidEntity(self.modifier) then
+			self.modifier:RemoveStack()
+		end
 	end
 end
