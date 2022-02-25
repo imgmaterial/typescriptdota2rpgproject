@@ -1,24 +1,24 @@
 --[[ Generated with https://github.com/TypeScriptToLua/TypeScriptToLua ]]
 require("lualib_bundle");
-__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["5"] = 1,["6"] = 1,["7"] = 1,["8"] = 2,["9"] = 2,["10"] = 4,["11"] = 5,["12"] = 4,["13"] = 5,["14"] = 8,["15"] = 9,["16"] = 8,["17"] = 13,["18"] = 14,["19"] = 15,["20"] = 13,["21"] = 18,["22"] = 19,["23"] = 21,["24"] = 22,["25"] = 23,["26"] = 25,["27"] = 26,["30"] = 18,["31"] = 32,["32"] = 33,["33"] = 34,["34"] = 35,["35"] = 37,["38"] = 41,["39"] = 41,["40"] = 43,["41"] = 44,["42"] = 46,["44"] = 41,["47"] = 50,["48"] = 32,["49"] = 5,["51"] = 4,["53"] = 5});
+__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["5"] = 1,["6"] = 1,["7"] = 1,["8"] = 2,["9"] = 2,["10"] = 4,["11"] = 5,["12"] = 4,["13"] = 5,["14"] = 7,["15"] = 8,["16"] = 7,["17"] = 12,["18"] = 13,["19"] = 14,["20"] = 12,["21"] = 17,["22"] = 18,["23"] = 20,["24"] = 21,["25"] = 22,["26"] = 24,["27"] = 25,["30"] = 17,["31"] = 31,["32"] = 32,["33"] = 33,["34"] = 34,["35"] = 36,["38"] = 40,["39"] = 40,["40"] = 42,["41"] = 43,["42"] = 45,["44"] = 40,["47"] = 49,["48"] = 31,["49"] = 5,["51"] = 4,["53"] = 5});
 local ____exports = {}
 local ____dota_ts_adapter = require("lib.dota_ts_adapter")
-local BaseItem = ____dota_ts_adapter.BaseItem
 local registerAbility = ____dota_ts_adapter.registerAbility
-local ____modifier_item_light_crossbow = require("modifiers.modifier_item_light_crossbow")
-local modifier_item_light_crossbow = ____modifier_item_light_crossbow.modifier_item_light_crossbow
-____exports.item_light_crossbow = __TS__Class()
-local item_light_crossbow = ____exports.item_light_crossbow
-item_light_crossbow.name = "item_light_crossbow"
-__TS__ClassExtends(item_light_crossbow, BaseItem)
-function item_light_crossbow.prototype.GetIntrinsicModifierName(self)
-    return modifier_item_light_crossbow.name
+local BaseItem = ____dota_ts_adapter.BaseItem
+local ____modifier_item_swift_blade = require("modifiers.modifier_item_swift_blade")
+local modifier_item_swift_blade = ____modifier_item_swift_blade.modifier_item_swift_blade
+____exports.item_swift_blade = __TS__Class()
+local item_swift_blade = ____exports.item_swift_blade
+item_swift_blade.name = "item_swift_blade"
+__TS__ClassExtends(item_swift_blade, BaseItem)
+function item_swift_blade.prototype.GetIntrinsicModifierName(self)
+    return modifier_item_swift_blade.name
 end
-function item_light_crossbow.prototype.OnOwnerSpawned(self)
+function item_swift_blade.prototype.OnOwnerSpawned(self)
     local required_level = self:GetSpecialValueFor("required_level")
     local gear_type = self:GetSpecialValueFor("gear_type")
 end
-function item_light_crossbow.prototype.OnHeroLevelUp(self)
+function item_swift_blade.prototype.OnHeroLevelUp(self)
     if IsServer() then
         local required_level = self:GetSpecialValueFor("required_level")
         local gear_type = self:GetSpecialValueFor("gear_type")
@@ -28,7 +28,7 @@ function item_light_crossbow.prototype.OnHeroLevelUp(self)
         end
     end
 end
-function item_light_crossbow.prototype.CanUnitPickUp(self, unit)
+function item_swift_blade.prototype.CanUnitPickUp(self, unit)
     local required_level = self:GetSpecialValueFor("required_level")
     local gear_type = self:GetSpecialValueFor("gear_type")
     if unit:GetLevel() < required_level then
@@ -46,10 +46,10 @@ function item_light_crossbow.prototype.CanUnitPickUp(self, unit)
     end
     return true
 end
-item_light_crossbow = __TS__Decorate(
+item_swift_blade = __TS__Decorate(
     {
         registerAbility(nil)
     },
-    item_light_crossbow
+    item_swift_blade
 )
 return ____exports

@@ -843,20 +843,20 @@
 
 
 	//=================================================================================================================
-	// Heavy Primitive Axe
+	// Swift Balde
 	//=================================================================================================================
-	"item_light_crossbow"
+	"item_swift_blade"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"item_lua"
-		"AbilityTextureName"			"primitive_axe"
-		"ScriptFile"					"items/item_primitive_axe"
+		"AbilityTextureName"			"blade_of_alacrity"
+		"ScriptFile"					"items/item_swift_blade"
 
 		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
 		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
 
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
 
 		// Stats
@@ -894,27 +894,32 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"10"
+				"bonus_agility"			"20"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"30"
+				"bonus_damage"			"50"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"20"
+				"bonus_attack_speed"	"100"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_distance_damage"	"50"
+				"bonus_agility_damage"	"10000"
 			}
 			"06"
 			{
 				"var_type"				 "FIELD_INTEGER"
-				"bonus_attack_range"	 "100"
+				"buff_duration"	 		 "20"
+			}
+			"07"
+			{
+				"var_type"				 "FIELD_INTEGER"
+				"proc_chance"	 		 "50"
 			}
 		}
 	}

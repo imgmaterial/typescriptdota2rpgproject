@@ -1,14 +1,13 @@
-import { BaseAbility, BaseItem, registerAbility } from "../lib/dota_ts_adapter";
-import { modifier_item_light_crossbow } from "../modifiers/modifier_item_light_crossbow";
+import { registerAbility, BaseItem } from "../lib/dota_ts_adapter";
+import { modifier_item_swift_blade } from "../modifiers/modifier_item_swift_blade";
 
 @registerAbility()
-export class item_light_crossbow extends BaseItem
+export class item_swift_blade extends BaseItem
 {
-
     GetIntrinsicModifierName(): string {
-        return modifier_item_light_crossbow.name
-        
+        return modifier_item_swift_blade.name
     }
+
 
     OnOwnerSpawned(): void {
         const required_level = this.GetSpecialValueFor("required_level");
@@ -49,7 +48,4 @@ export class item_light_crossbow extends BaseItem
 
         return true
     }
-
-
-
 }
