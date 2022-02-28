@@ -1,12 +1,13 @@
 import { BaseModifier, registerModifier } from "../lib/dota_ts_adapter";
+import { modifier_item_bear_claymore_buff } from "./modifier_item_bear_claymore_buff";
 
 @registerModifier()
-export class modifier_item_bear__claymore extends BaseModifier
+export class modifier_item_bear_claymore extends BaseModifier
 {   
     bonus_strength ? :number;
     bonus_damage ? :number;
     bonus_attack_speed ? :number;
-
+    buff_duration ?:number;
 
     IsHidden(): boolean {
         return true
@@ -23,6 +24,7 @@ export class modifier_item_bear__claymore extends BaseModifier
             this.bonus_strength = ability.GetSpecialValueFor("bonus_strength");
             this.bonus_damage = ability.GetSpecialValueFor("bonus_damage");
             this.bonus_attack_speed = ability.GetSpecialValueFor("bonus_attack_speed");
+            this.buff_duration = ability.GetSpecialValueFor("bonus_duration")
         }
     }
 
@@ -43,7 +45,7 @@ export class modifier_item_bear__claymore extends BaseModifier
 
     GetModifierAttackSpeedBonus_Constant()
     {
-        return (this.bonus_attack_speed ?? 0)*(-1);
+        return (this.bonus_attack_speed ?? 0);
     }
 
     OnAbilityExecuted(params:any){
@@ -51,6 +53,7 @@ export class modifier_item_bear__claymore extends BaseModifier
         if (!params.ability){}
         if (params.ability.IsItem()||params.ability.IsToggle()){}
         
+        this.GetParent().AddNewModifier(this.GetParent(), this.GetAbility(), modifier_item_bear_claymore_buff.name, {duration : this.buff_duration} )
         
             
 

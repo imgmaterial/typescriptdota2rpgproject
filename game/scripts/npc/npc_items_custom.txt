@@ -1014,7 +1014,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"item_lua"
-		"AbilityTextureName"			"blade_of_alacrity"
+		"AbilityTextureName"			"claymore"
 		"ScriptFile"					"items/item_bear_claymore"
 
 		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
@@ -1070,17 +1070,22 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"50"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_strength_multiplier"	"40"
+				"bonus_attack_speed"	"-50"
 			}
 			"06"
 			{
 				"var_type"				 "FIELD_INTEGER"
 				"buff_duration"	 		 "10"
+			}
+			"07"
+			{
+				"var_type"				 "FIELD_INTEGER"
+				"bonus_strength_buff"	 "10"
+			}
+			"08"
+			{
+				"var_type"				 "FIELD_INTEGER"
+				"bonus_hp_regen_buff"	 "5"
 			}
 		}
 	}

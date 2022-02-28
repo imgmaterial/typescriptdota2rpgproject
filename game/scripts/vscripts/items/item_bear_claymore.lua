@@ -6,13 +6,13 @@ local ____dota_ts_adapter = require("lib.dota_ts_adapter")
 local BaseItem = ____dota_ts_adapter.BaseItem
 local registerAbility = ____dota_ts_adapter.registerAbility
 local ____modifier_item_bear_claymore = require("modifiers.modifier_item_bear_claymore")
-local modifier_item_bear__claymore = ____modifier_item_bear_claymore.modifier_item_bear__claymore
+local modifier_item_bear_claymore = ____modifier_item_bear_claymore.modifier_item_bear_claymore
 ____exports.item_bear_claymore = __TS__Class()
 local item_bear_claymore = ____exports.item_bear_claymore
 item_bear_claymore.name = "item_bear_claymore"
 __TS__ClassExtends(item_bear_claymore, BaseItem)
 function item_bear_claymore.prototype.GetIntrinsicModifierName(self)
-    return modifier_item_bear__claymore.name
+    return modifier_item_bear_claymore.name
 end
 function item_bear_claymore.prototype.OnOwnerSpawned(self)
     local required_level = self:GetSpecialValueFor("required_level")

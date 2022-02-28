@@ -1,11 +1,11 @@
 import { BaseItem, registerAbility } from "../lib/dota_ts_adapter";
-import { modifier_item_bear__claymore } from "../modifiers/modifier_item_bear_claymore";
+import { modifier_item_bear_claymore } from "../modifiers/modifier_item_bear_claymore";
 
 @registerAbility()
 export class item_bear_claymore extends BaseItem
 {
     GetIntrinsicModifierName(): string {
-        return modifier_item_bear__claymore.name
+        return modifier_item_bear_claymore.name
     }
 
     OnOwnerSpawned(): void {
