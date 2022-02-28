@@ -7,7 +7,7 @@ function modifier_ability_poisonous_bite_stack:IsHidden()
 end
 
 function modifier_ability_poisonous_bite_stack:IsPurgable()
-	return false
+	return true
 end
 function modifier_ability_poisonous_bite_stack:GetAttributes()
 	return MODIFIER_ATTRIBUTE_MULTIPLE
@@ -20,8 +20,6 @@ end
 
 function modifier_ability_poisonous_bite_stack:OnRemoved()
 	if IsServer() then
-		if IsValidEntity(self.modifier) then
 			self.modifier:RemoveStack()
-		end
 	end
 end

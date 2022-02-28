@@ -48,9 +48,12 @@ export class modifier_item_bear_claymore extends BaseModifier
         return (this.bonus_attack_speed ?? 0);
     }
 
-    OnAbilityExecuted(params:any){    
-        this.GetParent().AddNewModifier(this.GetParent(), this.GetAbility(), modifier_item_bear_claymore_buff.name, {duration : this.buff_duration} 
-        )     
+    OnAbilityExecuted(params:any){   
+        const caster:any = this.GetParent()
+        if (IsServer()) 
+        {
+            caster.AddNewModifier(this.GetParent(), this.GetAbility(), modifier_item_bear_claymore_buff.name, {duration : this.buff_duration})
+        }     
     }
 
 }

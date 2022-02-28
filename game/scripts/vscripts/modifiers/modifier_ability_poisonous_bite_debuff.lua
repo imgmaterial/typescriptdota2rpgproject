@@ -76,10 +76,8 @@ function modifier_ability_poisonous_bite_debuff:AddStack( duration )
 end
 
 function modifier_ability_poisonous_bite_debuff:RemoveStack()
-	if IsValidEntity(self) then
-		if self:GetParent():IsAlive() == true then
-			self:DecrementStackCount()
-		end
+	if self then
+		self:DecrementStackCount()		
 	end
 
 	if self:GetStackCount()<=0 then
