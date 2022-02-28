@@ -28,7 +28,7 @@ end
 function modifier_item_bear_claymore_buff.prototype.GetModifierConstantHealthRegen(self)
     return self.bonus_hp_regen_buff or 0
 end
-function modifier_item_bear_claymore_buff.prototype.GetModifierExtraStrengthBonus(self)
+function modifier_item_bear_claymore_buff.prototype.GetModifierBonusStats_Strength(self)
     return self.bonus_strength_buff or 0
 end
 modifier_item_bear_claymore_buff = __TS__Decorate(

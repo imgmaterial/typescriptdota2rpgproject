@@ -39,7 +39,7 @@ export class modifier_item_bear_claymore extends BaseModifier
         return this.bonus_damage ?? 0;
     }
 
-    GetModifierExtraStrengthBonus(){
+    GetModifierBonusStats_Strength(){
         return this.bonus_strength ?? 0;
     }
 
@@ -48,17 +48,9 @@ export class modifier_item_bear_claymore extends BaseModifier
         return (this.bonus_attack_speed ?? 0);
     }
 
-    OnAbilityExecuted(params:any){
-        if (!IsServer()) {}
-        if (!params.ability){}
-        if (params.ability.IsItem()||params.ability.IsToggle()){}
-        
-        this.GetParent().AddNewModifier(this.GetParent(), this.GetAbility(), modifier_item_bear_claymore_buff.name, {duration : this.buff_duration} )
-        
-            
-
-
-        
+    OnAbilityExecuted(params:any){    
+        this.GetParent().AddNewModifier(this.GetParent(), this.GetAbility(), modifier_item_bear_claymore_buff.name, {duration : this.buff_duration} 
+        )     
     }
 
 }

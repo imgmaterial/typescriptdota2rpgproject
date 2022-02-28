@@ -1,6 +1,6 @@
 --[[ Generated with https://github.com/TypeScriptToLua/TypeScriptToLua ]]
 require("lualib_bundle");
-__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["5"] = 1,["6"] = 1,["7"] = 1,["8"] = 2,["9"] = 2,["10"] = 4,["11"] = 5,["12"] = 4,["13"] = 5,["14"] = 12,["15"] = 13,["16"] = 12,["17"] = 16,["18"] = 17,["19"] = 16,["20"] = 20,["21"] = 21,["22"] = 22,["23"] = 24,["24"] = 25,["25"] = 26,["26"] = 27,["28"] = 20,["29"] = 31,["30"] = 32,["31"] = 31,["32"] = 38,["33"] = 39,["34"] = 38,["35"] = 42,["36"] = 43,["37"] = 42,["38"] = 46,["39"] = 48,["40"] = 46,["41"] = 51,["42"] = 52,["44"] = 53,["46"] = 54,["48"] = 56,["49"] = 56,["50"] = 56,["51"] = 56,["52"] = 56,["53"] = 56,["54"] = 51,["55"] = 5,["57"] = 4,["59"] = 5});
+__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["5"] = 1,["6"] = 1,["7"] = 1,["8"] = 2,["9"] = 2,["10"] = 4,["11"] = 5,["12"] = 4,["13"] = 5,["14"] = 12,["15"] = 13,["16"] = 12,["17"] = 16,["18"] = 17,["19"] = 16,["20"] = 20,["21"] = 21,["22"] = 22,["23"] = 24,["24"] = 25,["25"] = 26,["26"] = 27,["28"] = 20,["29"] = 31,["30"] = 32,["31"] = 31,["32"] = 38,["33"] = 39,["34"] = 38,["35"] = 42,["36"] = 43,["37"] = 42,["38"] = 46,["39"] = 48,["40"] = 46,["41"] = 51,["42"] = 52,["43"] = 52,["44"] = 52,["45"] = 52,["46"] = 52,["47"] = 52,["48"] = 51,["49"] = 5,["51"] = 4,["53"] = 5});
 local ____exports = {}
 local ____dota_ts_adapter = require("lib.dota_ts_adapter")
 local BaseModifier = ____dota_ts_adapter.BaseModifier
@@ -32,19 +32,13 @@ end
 function modifier_item_bear_claymore.prototype.GetModifierPreAttack_BonusDamage(self)
     return self.bonus_damage or 0
 end
-function modifier_item_bear_claymore.prototype.GetModifierExtraStrengthBonus(self)
+function modifier_item_bear_claymore.prototype.GetModifierBonusStats_Strength(self)
     return self.bonus_strength or 0
 end
 function modifier_item_bear_claymore.prototype.GetModifierAttackSpeedBonus_Constant(self)
     return self.bonus_attack_speed or 0
 end
 function modifier_item_bear_claymore.prototype.OnAbilityExecuted(self, params)
-    if not IsServer() then
-    end
-    if not params.ability then
-    end
-    if params.ability:IsItem() or params.ability:IsToggle() then
-    end
     self:GetParent():AddNewModifier(
         self:GetParent(),
         self:GetAbility(),

@@ -36,7 +36,7 @@ export class modifier_item_bear_claymore_buff extends BaseModifier
         return this.bonus_hp_regen_buff ?? 0;
     }
 
-    GetModifierExtraStrengthBonus(){
+    GetModifierBonusStats_Strength(){
         return this.bonus_strength_buff ?? 0;
     }
 
