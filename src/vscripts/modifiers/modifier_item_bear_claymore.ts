@@ -24,7 +24,7 @@ export class modifier_item_bear_claymore extends BaseModifier
             this.bonus_strength = ability.GetSpecialValueFor("bonus_strength");
             this.bonus_damage = ability.GetSpecialValueFor("bonus_damage");
             this.bonus_attack_speed = ability.GetSpecialValueFor("bonus_attack_speed");
-            this.buff_duration = ability.GetSpecialValueFor("bonus_duration")
+            this.buff_duration = ability.GetSpecialValueFor("buff_duration")
         }
     }
 

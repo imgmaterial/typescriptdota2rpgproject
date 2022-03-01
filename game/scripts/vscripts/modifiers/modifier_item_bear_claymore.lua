@@ -23,7 +23,7 @@ function modifier_item_bear_claymore.prototype.OnCreated(self, params)
         self.bonus_strength = ability:GetSpecialValueFor("bonus_strength")
         self.bonus_damage = ability:GetSpecialValueFor("bonus_damage")
         self.bonus_attack_speed = ability:GetSpecialValueFor("bonus_attack_speed")
-        self.buff_duration = ability:GetSpecialValueFor("bonus_duration")
+        self.buff_duration = ability:GetSpecialValueFor("buff_duration")
     end
 end
 function modifier_item_bear_claymore.prototype.DeclareFunctions(self)
@@ -41,7 +41,6 @@ end
 function modifier_item_bear_claymore.prototype.OnAbilityExecuted(self, params)
     local caster = self:GetParent()
     if IsServer() then
-        print("cast")
         caster:AddNewModifier(
             self:GetParent(),
             self:GetAbility(),
