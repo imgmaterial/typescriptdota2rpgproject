@@ -1,18 +1,28 @@
 --[[ Generated with https://github.com/TypeScriptToLua/TypeScriptToLua ]]
 require("lualib_bundle");
-__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["5"] = 1,["6"] = 1,["7"] = 1,["8"] = 2,["9"] = 2,["10"] = 4,["11"] = 5,["12"] = 4,["13"] = 5,["14"] = 7,["15"] = 8,["16"] = 7,["17"] = 12,["18"] = 13,["19"] = 14,["20"] = 12,["21"] = 17,["22"] = 18,["23"] = 20,["24"] = 21,["25"] = 22,["26"] = 24,["27"] = 25,["30"] = 17,["31"] = 31,["32"] = 32,["33"] = 33,["34"] = 34,["35"] = 36,["38"] = 40,["39"] = 40,["40"] = 42,["41"] = 43,["42"] = 45,["44"] = 40,["47"] = 49,["48"] = 31,["49"] = 5,["51"] = 4,["53"] = 5});
+__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["5"] = 1,["6"] = 1,["7"] = 1,["8"] = 2,["9"] = 2,["10"] = 3,["11"] = 3,["12"] = 5,["13"] = 6,["14"] = 5,["15"] = 6,["16"] = 11,["17"] = 12,["18"] = 11,["19"] = 17,["20"] = 18,["21"] = 19,["22"] = 21,["23"] = 22,["24"] = 23,["26"] = 17,["27"] = 30,["28"] = 31,["29"] = 32,["30"] = 30,["31"] = 35,["32"] = 36,["33"] = 38,["34"] = 39,["35"] = 40,["36"] = 42,["37"] = 43,["40"] = 35,["41"] = 49,["42"] = 50,["43"] = 51,["44"] = 52,["45"] = 54,["48"] = 58,["49"] = 58,["50"] = 60,["51"] = 61,["52"] = 63,["54"] = 58,["57"] = 67,["58"] = 49,["59"] = 6,["61"] = 5,["63"] = 6});
 local ____exports = {}
 local ____dota_ts_adapter = require("lib.dota_ts_adapter")
 local BaseItem = ____dota_ts_adapter.BaseItem
 local registerAbility = ____dota_ts_adapter.registerAbility
-local ____modifier_item_sone_plates = require("modifiers.modifier_item_sone_plates")
-local modifier_item_stone_plates = ____modifier_item_sone_plates.modifier_item_stone_plates
+local ____modifier_item_stone_plates = require("modifiers.modifier_item_stone_plates")
+local modifier_item_stone_plates = ____modifier_item_stone_plates.modifier_item_stone_plates
+local ____modifier_item_stone_plates_buff = require("modifiers.modifier_item_stone_plates_buff")
+local modifier_item_stone_plates_buff = ____modifier_item_stone_plates_buff.modifier_item_stone_plates_buff
 ____exports.item_stone_plates = __TS__Class()
 local item_stone_plates = ____exports.item_stone_plates
 item_stone_plates.name = "item_stone_plates"
 __TS__ClassExtends(item_stone_plates, BaseItem)
 function item_stone_plates.prototype.GetIntrinsicModifierName(self)
     return modifier_item_stone_plates.name
+end
+function item_stone_plates.prototype.OnSpellStart(self)
+    local caster = self:GetCaster()
+    if IsServer() then
+        caster:Purge(false, false, false, true, false)
+        self.duration = self:GetSpecialValueFor("buff_duration")
+        caster:AddNewModifier(caster, self, modifier_item_stone_plates_buff.name, {duration = self.duration})
+    end
 end
 function item_stone_plates.prototype.OnOwnerSpawned(self)
     local required_level = self:GetSpecialValueFor("required_level")

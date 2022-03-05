@@ -7,7 +7,6 @@ export class modifier_item_stone_plates extends BaseModifier
     bonus_strength ?:number;
     damage_reduction ?:number;
     buff_duration ?:number;
-    bonus_magic_resist_buff ?:number;
 
     IsHidden(): boolean {
         return true
@@ -25,7 +24,6 @@ export class modifier_item_stone_plates extends BaseModifier
             this.bonus_strength = ability.GetSpecialValueFor("bonus_strength")
             this.damage_reduction = ability.GetSpecialValueFor("damage_reduction")
             this.buff_duration = ability.GetSpecialValueFor("buff_duration")
-            this.bonus_magic_resist_buff = ability.GetSpecialValueFor("bonus_magic_resist_buff")
         }
     }
 

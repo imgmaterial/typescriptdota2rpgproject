@@ -1,12 +1,30 @@
 import { BaseItem, registerAbility } from "../lib/dota_ts_adapter";
-import { modifier_item_stone_plates } from "../modifiers/modifier_item_sone_plates";
+import { modifier_item_stone_plates } from "../modifiers/modifier_item_stone_plates";
+import { modifier_item_stone_plates_buff } from "../modifiers/modifier_item_stone_plates_buff";
 
 @registerAbility()
 export class item_stone_plates extends BaseItem
 {
+    duration ?:number;
+
+
     GetIntrinsicModifierName(): string {
         return modifier_item_stone_plates.name
     }
+
+
+
+    OnSpellStart(): void {
+        const caster = this.GetCaster()
+        if (IsServer())
+        {
+            caster.Purge(false,false,false,true,false)
+            this.duration = this.GetSpecialValueFor("buff_duration")
+            caster.AddNewModifier(caster, this, modifier_item_stone_plates_buff.name,{duration : this.duration})
+        }
+    }
+
+
 
 
     OnOwnerSpawned(): void {

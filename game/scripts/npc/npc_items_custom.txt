@@ -1106,7 +1106,7 @@
 		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
 		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
 
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"60.0"
 
@@ -1156,7 +1156,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_reduction"		"-10"
+				"damage_reduction"		"10"
 			}
 			"06"
 			{
