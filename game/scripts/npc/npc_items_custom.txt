@@ -1233,7 +1233,22 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"12"
+				"bonus_agility"			"17"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movespeed_buff"	"50"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"proc_chance"			"25"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"5"
 			}
 		}
 	}
