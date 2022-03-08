@@ -1338,4 +1338,103 @@
 			}
 		}
 	}
+
+
+	//=================================================================================================================
+	// Dresses of Makosh
+	//=================================================================================================================
+	"item_dress_of_makosh"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"trickster_cloak"
+		"ScriptFile"					"items/item_dress_of_makosh"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"225.0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+            "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"8"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"6"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"25"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"20"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_cooldown"			"225"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"25"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"proc_hp"				"15"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion_buff"	"100"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_buff"			"100"
+			}
+		}
+	}
 }
