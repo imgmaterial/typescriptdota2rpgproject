@@ -31,7 +31,7 @@ export class modifier_item_porevit_ring extends BaseModifier
 
     DeclareFunctions()
     {
-        return [ModifierFunction.HEALTH_REGEN_CONSTANT,ModifierFunction.HEALTH_BONUS, ModifierFunction.STATS_STRENGTH_BONUS]
+        return [ModifierFunction.HEALTH_REGEN_CONSTANT,ModifierFunction.HEALTH_BONUS, ModifierFunction.STATS_STRENGTH_BONUS, ModifierFunction.ON_TAKEDAMAGE]
     }
 
 

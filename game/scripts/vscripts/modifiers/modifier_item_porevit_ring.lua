@@ -28,7 +28,7 @@ function modifier_item_porevit_ring.prototype.OnCreated(self, params)
     end
 end
 function modifier_item_porevit_ring.prototype.DeclareFunctions(self)
-    return {MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT, MODIFIER_PROPERTY_HEALTH_BONUS, MODIFIER_PROPERTY_STATS_STRENGTH_BONUS}
+    return {MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT, MODIFIER_PROPERTY_HEALTH_BONUS, MODIFIER_PROPERTY_STATS_STRENGTH_BONUS, MODIFIER_EVENT_ON_TAKEDAMAGE}
 end
 function modifier_item_porevit_ring.prototype.OnTakeDamage(self)
     if IsServer() then

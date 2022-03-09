@@ -1522,6 +1522,11 @@
 				"var_type"				"FIELD_INTEGER"
 				"heal_buff"	            "300"
 			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"	            "6"
+			}
 		}
 	}
 }

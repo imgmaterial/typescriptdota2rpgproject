@@ -22,7 +22,6 @@ export class modifier_item_porevit_ring_buff extends BaseModifier
             this.bonus_magic_res_buff = ability.GetSpecialValueFor("bonus_magic_res_buff")
             this.heal_buff = ability.GetSpecialValueFor("heal_buff")
         }
-        this.GetParent().Heal(this.heal_buff ?? 0,ability)
     }
 
     DeclareFunctions()
