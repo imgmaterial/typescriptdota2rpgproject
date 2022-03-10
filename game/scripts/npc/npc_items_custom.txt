@@ -1500,7 +1500,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"proc_chance"			"100"
+				"proc_chance"			"5"
 			}
 			"06"
 			{
@@ -1510,12 +1510,12 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor_buff"		"10"
+				"bonus_armor_buff"		"20"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_magic_res_buff"	"10"
+				"bonus_magic_res_buff"	"20"
 			}
 			"09"
 			{
@@ -1526,6 +1526,83 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"buff_duration"	            "6"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Crown of Insight
+	//=================================================================================================================
+	"item_crown_of_insight"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"psychic_headband"
+		"ScriptFile"					"items/item_crown_of_insight"
+
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"ItemDisplayOwnership"			"1"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"2"
+			}
+            "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gear_type"		        "1"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_int"	"20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"5"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen"		"50.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"proc_chance"			"100.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_proc"				"1000"
 			}
 		}
 	}
